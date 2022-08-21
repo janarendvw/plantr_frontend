@@ -1,0 +1,8 @@
+fieldset {
+  border: solid thin;
+  @apply rounded-lg;
+  @apply border-base-200;
+}
+legend {
+  @apply bg-base-100;
+}
