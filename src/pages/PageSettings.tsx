@@ -10,9 +10,14 @@ function PageSettings() {
 
     return (
         <div className='container w-4/6'>
-            <h1 className='card-title text-3xl py-3'>
-                Settings
-            </h1>
+            <div className='card-title text-sm'>
+                <h1 className='text-3xl py-3'>
+                    Settings
+                </h1>
+                <span className='shortcut ml-5 mt-1'>
+                    <span className='kbd kbd-xs'>SHIFT</span> + <span className='kbd kbd-xs'>TAB</span> + <span className='kbd kbd-xs'>S</span>
+                </span>
+            </div>
             <span>Theme:</span>
             <select data-choose-theme className='select select-sm select-ghost rounded-lg'>
                 <option value="emerald">Default</option>
