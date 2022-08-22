@@ -8,7 +8,7 @@ function PageProfile() {
             <div className='card col bg-base-100 border border-white/10 shadow-md'>
                 <ProfileMenu/>
             </div>
-            <div className='card col-span-2 bg-base-200/20 border border-white/10 h-full'>
+            <div className='card col-span-2 bg-base-200/20 border border-white/10 h-full p-4'>
                 <Outlet/>
             </div>
         </div>
