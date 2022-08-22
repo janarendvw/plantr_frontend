@@ -15,10 +15,6 @@ function MenuBarMain() {
             link: '/profile',
             icon: 'person',
         },
-        {
-            link: '/settings',
-            icon: 'settings'
-        }
     ]
     return(
         <>
