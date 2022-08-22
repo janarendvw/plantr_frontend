@@ -6,3 +6,11 @@ fieldset {
 legend {
   @apply bg-base-100;
 }
+
+.shortcut {
+  opacity: 0.2;
+  transition-duration: 500ms;
+  &:hover {
+    opacity: 1;
+  }
+}
