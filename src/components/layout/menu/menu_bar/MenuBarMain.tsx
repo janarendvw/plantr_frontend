@@ -4,7 +4,7 @@ import MenuBarItem from "./MenuBarItem";
 
 function MenuBarMain() {
     const menuItems: { link: string; icon: string }[] = [{
-        link: '/',
+        link: '/dashboard',
         icon: 'potted_plant',
     },
         {
@@ -15,10 +15,6 @@ function MenuBarMain() {
             link: '/profile',
             icon: 'person',
         },
-        {
-            link: '/settings',
-            icon: 'settings'
-        }
     ]
     return(
         <>
