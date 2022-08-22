@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
+import Shortcut from "../components/layout/UI/Shortcut";
 
 function PageSettings() {
     useEffect(() => {
@@ -14,9 +15,7 @@ function PageSettings() {
                 <h1 className='text-3xl py-3'>
                     Settings
                 </h1>
-                <span className='shortcut ml-5 mt-1'>
-                    <span className='kbd kbd-xs'>SHIFT</span> + <span className='kbd kbd-xs'>TAB</span> + <span className='kbd kbd-xs'>S</span>
-                </span>
+                <Shortcut keys={['SHIFT', 'TAB', 'S']}/>
             </div>
             <span>Theme:</span>
             <select data-choose-theme className='select select-sm select-ghost rounded-lg'>
@@ -26,7 +25,6 @@ function PageSettings() {
                 <option value="synthwave">Futuristic</option>
                 <option value="pastel">Breezy</option>
             </select>
-
        </div>);
 }
 
