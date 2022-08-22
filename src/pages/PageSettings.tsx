@@ -15,7 +15,6 @@ function PageSettings() {
                 <h1 className='text-3xl py-3'>
                     Settings
                 </h1>
-                <Shortcut keys={['SHIFT', 'TAB', 'S']}/>
             </div>
             <span>Theme:</span>
             <select data-choose-theme className='select select-sm select-ghost rounded-lg'>
