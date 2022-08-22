@@ -9,7 +9,7 @@ function SettingsTheme() {
     }, [])
 
     return (
-            <select data-choose-theme className='select select-sm select-ghost rounded-lg'>
+            <select data-choose-theme className='select select-sm'>
                 <option value="emerald">Default</option>
                 <option value="forest">Dark</option>
                 <option value="lofi">Monochrome</option>
