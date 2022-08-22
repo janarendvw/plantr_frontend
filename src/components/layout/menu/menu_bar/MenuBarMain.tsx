@@ -4,7 +4,7 @@ import MenuBarItem from "./MenuBarItem";
 
 function MenuBarMain() {
     const menuItems: { link: string; icon: string }[] = [{
-        link: '/',
+        link: '/dashboard',
         icon: 'potted_plant',
     },
         {

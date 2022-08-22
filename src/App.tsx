@@ -12,8 +12,10 @@ function App() {
       <BrowserRouter>
               <Routes>
                   <Route path="/" element={<ContentContainer/>}>
-                      <Route path="" element={<PageDashboard/>}/>
+                      <Route index element={<PageDashboard/>}/>
+                      <Route path="/dashboard" element={<PageDashboard/>}/>
                       <Route path="profile" element={<PageProfile/>}>
+                          <Route index element={<PmGeneral/>}/>
                           <Route path='general-settings' element={<PmGeneral/>}/>
                       </Route>
                       <Route path="statistics" element={<PageStats/>}/>

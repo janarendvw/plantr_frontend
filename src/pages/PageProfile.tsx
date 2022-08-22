@@ -5,10 +5,10 @@ import {Outlet} from "react-router-dom";
 function PageProfile() {
     return (
         <div className='grid gap-4 md:grid-cols-3 grid-rows-1 max-w-full'>
-            <div className='card col bg-base-100 border border-white/10 shadow-md'>
+            <div className='card col text-base-content shadow p-4'>
                 <ProfileMenu/>
             </div>
-            <div className='card col-span-2 bg-base-200/20 border border-white/10 h-full p-4'>
+            <div className='card col-span-2 border border-base-200/40 border-dashed h-full p-4'>
                 <Outlet/>
             </div>
         </div>

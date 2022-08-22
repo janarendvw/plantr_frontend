@@ -5,13 +5,17 @@ import {Link, useLocation} from "react-router-dom"
 
 interface MenuItem {
     icon?: string
-    link?: string
+    link: string
 }
 
 function MenuBarItem(props:MenuItem) {
-
+    let isActive: boolean = false
     const location = useLocation()
-    let isActive: boolean = props.link === location.pathname
+    console.log(location)
+
+    if (location.pathname.includes(props.link)){
+        isActive = true;
+    }
     return (
         <>
         {props.link && <Link to={props.link}>
