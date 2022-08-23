@@ -8,6 +8,10 @@ import ContentContainer from "./components/layout/containers/ContentContainer";
 import PmGeneral from "./components/layout/menu/profile_menu/PmGeneral";
 import {PlantContextProvider} from "./contexts/PlantContext";
 import ImageCheck from "./components/layout/containers/ImageCheck";
+import PmPrivacy from "./components/layout/menu/profile_menu/PmPrivacy";
+import PmProfile from "./components/layout/menu/profile_menu/PmProfile";
+import PmInfo from "./components/layout/menu/profile_menu/PmInfo";
+import PmSupport from "./components/layout/menu/profile_menu/PmSupport";
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
                           <Route path="/profile" element={<PageProfile/>}>
                               <Route index element={<PmGeneral/>}/>
                               <Route path='general-settings' element={<PmGeneral/>}/>
+                              <Route path='privacy-settings' element={<PmPrivacy/>}/>
+                              <Route path='profile-settings' element={<PmProfile/>}/>
+                              <Route path='info' element={<PmInfo/>}/>
+                              <Route path='support' element={<PmSupport/>}/>
                           </Route>
                           <Route path="/statistics" element={<PageStats/>}/>
                           <Route path="/image-check" element={<ImageCheck/>}/>

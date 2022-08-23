@@ -9,7 +9,7 @@ function SettingsTheme() {
     }, [])
 
     return (
-            <select data-choose-theme className='select select-sm'>
+            <select data-choose-theme className='select select-sm bg-base-200'>
                 <option value="emerald">Default</option>
                 <option value="dark">Dark</option>
                 <option value="forest">Forest</option>
