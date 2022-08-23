@@ -6,9 +6,11 @@ import PageProfile from "./pages/PageProfile";
 import PageStats from "./pages/PageStats";
 import ContentContainer from "./components/layout/containers/ContentContainer";
 import PmGeneral from "./components/layout/menu/profile_menu/PmGeneral";
+import { PlantContextProvider } from "./contexts/PlantContext"
 
 function App() {
   return (
+      <PlantContextProvider>
       <BrowserRouter>
               <Routes>
                   <Route path="/" element={<ContentContainer/>}>
@@ -23,6 +25,7 @@ function App() {
               </Routes>
       <MenuBarMain/>
       </BrowserRouter>
+      </PlantContextProvider>
   )
 }
 
