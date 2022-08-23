@@ -6,25 +6,28 @@ import PageProfile from "./pages/PageProfile";
 import PageStats from "./pages/PageStats";
 import ContentContainer from "./components/layout/containers/ContentContainer";
 import PmGeneral from "./components/layout/menu/profile_menu/PmGeneral";
-import { PlantContextProvider } from "./contexts/PlantContext"
+import {PlantContextProvider} from "./contexts/PlantContext";
+import ImageCheck from "./components/layout/containers/ImageCheck";
 
 function App() {
   return (
       <PlantContextProvider>
-      <BrowserRouter>
-              <Routes>
-                  <Route path="/" element={<ContentContainer/>}>
-                      <Route index element={<PageDashboard/>}/>
-                      <Route path="/dashboard" element={<PageDashboard/>}/>
-                      <Route path="profile" element={<PageProfile/>}>
-                          <Route index element={<PmGeneral/>}/>
-                          <Route path='general-settings' element={<PmGeneral/>}/>
+          <BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<ContentContainer/>}>
+                          <Route index element={<PageDashboard/>}/>
+                          <Route path="/dashboard" element={<PageDashboard/>}/>
+                          <Route path="/profile" element={<PageProfile/>}>
+                              <Route index element={<PmGeneral/>}/>
+                              <Route path='general-settings' element={<PmGeneral/>}/>
+                          </Route>
+                          <Route path="/statistics" element={<PageStats/>}/>
+                          <Route path="/image-check" element={<ImageCheck/>}/>
+
                       </Route>
-                      <Route path="statistics" element={<PageStats/>}/>
-                  </Route>
-              </Routes>
-      <MenuBarMain/>
-      </BrowserRouter>
+                  </Routes>
+          <MenuBarMain/>
+          </BrowserRouter>
       </PlantContextProvider>
   )
 }

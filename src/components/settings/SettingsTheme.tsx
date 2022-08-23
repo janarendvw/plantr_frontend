@@ -11,7 +11,8 @@ function SettingsTheme() {
     return (
             <select data-choose-theme className='select select-sm'>
                 <option value="emerald">Default</option>
-                <option value="forest">Dark</option>
+                <option value="dark">Dark</option>
+                <option value="forest">Forest</option>
                 <option value="lofi">Monochrome</option>
                 <option value="synthwave">Futuristic</option>
                 <option value="pastel">Breezy</option>

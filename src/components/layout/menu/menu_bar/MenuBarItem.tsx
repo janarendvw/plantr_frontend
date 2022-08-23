@@ -11,7 +11,6 @@ interface MenuItem {
 function MenuBarItem(props:MenuItem) {
     let isActive: boolean = false
     const location = useLocation()
-    console.log(location)
 
     if (location.pathname.includes(props.link)){
         isActive = true;

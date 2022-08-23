@@ -1,29 +1,26 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, {Dispatch, ReactNode, useEffect, useState} from 'react'
 
-// create context
-const PlantContext = createContext('');
+interface PlantContextInterface {
+    image: string;
+    setImage: Dispatch<any>;
+}
+const PlantContext = React.createContext<PlantContextInterface | null>(null);
 
-// @ts-ignore
-const PlantContextProvider = ({ children }) => {
-    // the value that will be given to the context
-    const [plant, setPlant] = useState('');
+interface Props {
+    children?: ReactNode
+}
 
-    // fetch a user from a fake backend API
+const PlantContextProvider = ({children, ...props}: Props) => {
+    const [image, setImage] = useState<string>('')
     useEffect(() => {
-        const loadPlant = {
-            url: null
-        }
-        // @ts-ignore
-        setPlant(loadPlant)
 
-    }, []);
+    }, [])
 
-    return (
-        // the Provider gives access to the context to its children
-        <PlantContext.Provider value={plant}>
-            {children}
-        </PlantContext.Provider>
-    );
-};
+    return <PlantContext.Provider value={{
+    image, setImage
+    }}>
+    {children}
+    </PlantContext.Provider>
+}
 
-export { PlantContext, PlantContextProvider };
+export {PlantContext, PlantContextProvider}
